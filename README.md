@@ -51,6 +51,11 @@
     gravita_notify_when_available_shop:
         resource: "@GravitaSyliusNotifyWhenAvailablePlugin/Resources/config/app/shop_routing.yml"
     ````
+    
+5. Update your database:
+    ````bash
+    php bin\console doctrine:schema:update --force
+    ````
 
 ## Usage
 
