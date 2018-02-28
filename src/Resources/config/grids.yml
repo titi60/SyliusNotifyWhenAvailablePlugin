@@ -1,0 +1,2 @@
+imports:
+    - { resource: 'grid/notification_list_item.yml' }

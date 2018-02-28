@@ -1,0 +1,10 @@
+sylius_resource:
+    resources:
+        gravita.notification_list:
+            driver: doctrine/orm
+            classes:
+                model: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
+        gravita.notification_list_item:
+            driver: doctrine/orm
+            classes:
+                model: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem

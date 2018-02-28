@@ -1,0 +1,104 @@
+<div id="gravita-product-variants-availability" class="ui segment" style="display: none;">
+    {% set currentProduct = settings.product %}
+    {% if currentProduct.hasOptions %}
+        <form action="{{ url('gravita_notify_when_available_add_to_notification_list') }}" method="POST" id="gravita-availability-form" class="ui form">
+            <input type="hidden" name="gravita[_token]" value="{{ csrf_token('add-to-list') }}">
+            <input type="hidden" name="gravita[variant-id]">
+            <div class="field">
+                <h4 class="ui header" id="gravita-current-availability-message">Disponible en junio</h4>
+            </div>
+            <div class="two fields">
+                <div class="eleven wide field">
+                    <input type="email" name="gravita[notification-email]" placeholder="{{ 'sylius.ui.email'|trans }}" required>
+                </div>
+                <div class="five wide field">
+                    <input type="submit" value="¡Avisame!" class="ui button">
+                </div>
+            </div>
+        </form>
+        {% for variant in currentProduct.variants %}
+            {% set optionClasses = '' %}
+            {%- for optionValue in variant.optionValues -%}
+                {% set optionClasses = optionClasses ~ optionValue.code ~ ' ' %}
+            {%- endfor -%}
+            <div class="{{- optionClasses|trim -}}" data-variant-id="{{ variant.id }}" data-is-available="{{ variant.isAvailable }}" data-available-message="{{ variant.availableFrom }}"></div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+{% block javascripts %}
+    <script type="text/javascript">
+        updateNotificationBlock = function () {
+            let gravitaConainter = document.getElementById('gravita-product-variants-availability');
+            let availabilityMessage = document.getElementById('gravita-current-availability-message');
+            let variantInput = document.getElementsByName('gravita[variant-id]');
+            let classList = '';
+
+            for (let element of document.querySelectorAll('select[name^="sylius_add_to_cart[cartItem][variant]"]')) {
+                classList += element.value + ' ';
+            }
+
+            let domElement = document.getElementsByClassName(classList.trim());
+            if (domElement.length > 0) {
+                let data = domElement[0];
+                if (!!+data.dataset.isAvailable !== true && data.dataset.availableFrom !== '') {
+                    availabilityMessage.innerText = data.dataset.availableMessage;
+                    variantInput[0].value = data.dataset.variantId;
+                    gravitaConainter.style.display = 'block';
+                } else {
+                    gravitaConainter.style.display = 'none';
+                }
+            }
+        };
+
+        processAvailabilityForm = function(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            let form = event.target;
+            form.classList.add('loading');
+            let request = new Request(
+                form.action,
+                {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: new FormData(document.getElementById('gravita-availability-form')),
+                    credentials: 'include'
+                }
+            );
+            fetch(request)
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    let message = document.createElement('div');
+                    message.classList.add('ui', 'floating', 'message');
+                    message.appendChild(document.createTextNode(data.message));
+                    form.appendChild(message)
+                    form.elements['gravita[notification-email]'].value = '';
+
+                    setTimeout(() => {
+                        form.removeChild(message);
+                    }, 3000);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => {
+                    form.classList.remove('loading');
+                });
+
+            return false;
+        };
+
+        (function () {
+            for (let element of document.querySelectorAll('select[name^="sylius_add_to_cart[cartItem][variant]"]')) {
+                element.addEventListener('change', updateNotificationBlock);
+            }
+            let availabilityForm = document.getElementById('gravita-availability-form');
+            availabilityForm.addEventListener('submit', processAvailabilityForm);
+            updateNotificationBlock();
+        })();
+    </script>
+{% endblock %}

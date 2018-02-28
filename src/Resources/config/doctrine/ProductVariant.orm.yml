@@ -1,0 +1,13 @@
+Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant:
+    type: entity
+    table: sylius_product_variant
+    oneToOne:
+        notificationList:
+            targetEntity: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
+            mappedBy: productVariant
+    fields:
+        isAvailable:
+            type: boolean
+        availableFrom:
+            type: string
+            nullable: true

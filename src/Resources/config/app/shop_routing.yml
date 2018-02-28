@@ -1,0 +1,11 @@
+gravita_notify_when_available_add_to_notification_list:
+    path: /gravita/ajax/add-to-notification-list
+    methods:
+        - POST
+    defaults:
+        _controller: GravitaSyliusNotifyWhenAvailablePlugin:Gravita:ajaxAddToNotificationList
+        name: ~
+
+gravita_admin:
+    resource: '../routing/admin.yml'
+    prefix: /admin

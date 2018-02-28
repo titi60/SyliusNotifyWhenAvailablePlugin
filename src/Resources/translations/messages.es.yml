@@ -1,0 +1,14 @@
+gravita:
+    admin:
+        product_variant:
+            title: 'Disponibilidad'
+            form:
+                availableFrom: 'Texto de disponibilidad'
+                isAvailable: 'Disponible para compra'
+    notification_list_item:
+        created: '%email% añadido a la lista de notificación.'
+        exists: '%email% ya está registrado en esta lista.'
+        subheader: 'Gestiona los emails apuntados a las listas de notificación de cada producto'
+        notified: 'Notificado'
+    ui:
+        notification_list_items: 'Lista de notificaciones'

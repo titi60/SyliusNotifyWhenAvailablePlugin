@@ -1,0 +1,6 @@
+sylius:
+    resource: "../../../../vendor/sylius/sylius/app/config/routing.yml"
+
+# Put your own routes here
+gravita_notify_when_available_shop:
+    resource: "@GravitaSyliusNotifyWhenAvailablePlugin/Resources/config/app/shop_routing.yml"

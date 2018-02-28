@@ -1,0 +1,31 @@
+services:
+    # Form overrides
+    gravita.form.extension.type.product_variant:
+        class: Gravita\SyliusNotifyWhenAvailablePlugin\Form\Extension\ProductVariantTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType }
+    gravita.form.extension.type.product_variant_translation:
+            class: Gravita\SyliusNotifyWhenAvailablePlugin\Form\Extension\ProductVariantTranslationTypeExtension
+            tags:
+                - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantTranslationType }
+
+    # Admin menu customization
+    gravita.listener.admin.menu_builder:
+        class: Gravita\SyliusNotifyWhenAvailablePlugin\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addMenuItems }
+
+    # Event block customizations
+    gravita.block_event_listener.admin.product_variant.update.tab_details:
+        class: Sylius\Bundle\UiBundle\Block\BlockEventListener
+        arguments:
+            - '@@GravitaSyliusNotifyWhenAvailablePlugin/product_variant_form_block.html.twig'
+        tags:
+            - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.product_variant.update.tab_details, method: onBlockEvent }
+
+    gravita.block_event_listener.shop.product.show.after_add_to_cart:
+        class: Sylius\Bundle\UiBundle\Block\BlockEventListener
+        arguments:
+            - '@@GravitaSyliusNotifyWhenAvailablePlugin/product_after_add_to_cart_block.html.twig'
+        tags:
+            - { name: kernel.event_listener, event: sonata.block.event.sylius.shop.product.show.after_add_to_cart, method: onBlockEvent }

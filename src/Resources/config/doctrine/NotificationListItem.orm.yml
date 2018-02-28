@@ -1,0 +1,26 @@
+Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem:
+    type: entity
+    table: gravita_notification_list_item
+    repositoryClass: Gravita\SyliusNotifyWhenAvailablePlugin\Repository\NotificationListItemRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        notificationList:
+            targetEntity: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
+            inversedBy: items
+            cascade:
+                - persist
+            joinColumn:
+                name: notification_list_id
+                referencedColumnName: id
+    fields:
+        email:
+            type: string
+            length: '150'
+        notified:
+            type: boolean
+    lifecycleCallbacks: {  }

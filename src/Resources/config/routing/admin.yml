@@ -1,0 +1,2 @@
+gravita_admin_notification_list_item:
+    resource: 'admin/admin_notification_list_item_routing.yml'

@@ -1,0 +1,26 @@
+sylius_grid:
+    grids:
+        gravita_admin_notification_list_item:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem
+            limits: [25, 50, 100]
+            fields:
+                email:
+                    type: string
+                    label: sylius.ui.email
+                notification_list.product_variant.product.name:
+                    type: string
+                    label: sylius.ui.product
+                notification_list.product_variant.name:
+                    type: string
+                    label: sylius.ui.variant
+                notified:
+                    type: twig
+                    label: gravita.notification_list_item.notified
+                    options:
+                        template: GravitaSyliusNotifyWhenAvailablePlugin:Grid/Field:notified.html.twig
+            filters:
+                email:
+                    type: string

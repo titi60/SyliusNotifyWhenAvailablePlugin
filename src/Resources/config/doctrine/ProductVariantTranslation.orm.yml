@@ -1,0 +1,10 @@
+Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariantTranslation:
+    type: entity
+    table: null
+    #repositoryClass: Gravita\SyliusNotifyWhenAvailablePlugin\Repository\ProductVariantTranslationRepository
+    fields:
+        availableFrom:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }

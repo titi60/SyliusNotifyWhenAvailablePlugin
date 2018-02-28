@@ -1,0 +1,11 @@
+imports:
+    - { resource: '@GravitaSyliusNotifyWhenAvailablePlugin/Resources/config/grids.yml' }
+
+sylius_product:
+    resources:
+        product_variant:
+            classes:
+                model: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant
+            translation:
+                classes:
+                    model: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariantTranslation

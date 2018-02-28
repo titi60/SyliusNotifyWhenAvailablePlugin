@@ -1,0 +1,25 @@
+Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList:
+    type: entity
+    table: gravita_notification_list
+    repositoryClass: Gravita\SyliusNotifyWhenAvailablePlugin\Repository\NotificationListRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToOne:
+        productVariant:
+            targetEntity: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant
+            inversedBy: notificationList
+            joinColumn:
+                name: product_variant_id
+                referencedColumnName: id
+    oneToMany:
+        items:
+            targetEntity: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem
+            mappedBy: notificationList
+            cascade:
+                - persist
+                - refresh
+    lifecycleCallbacks: {  }
