@@ -1,5 +1,5 @@
 {
-    "name": "gravita/notify-when-available",
+    "name": "titi60/notify-when-available",
     "type": "sylius-plugin",
     "description": "A Sylius plugin that enables the option of setting a future date when the product will be available. Users can add an email to notify then when the product can be purchased",
     "license": "MIT",
