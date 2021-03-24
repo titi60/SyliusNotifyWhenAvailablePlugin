@@ -31,7 +31,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Gravita\\SyliusNotifyWhenAvailablePlugin\\": "src/",
+            "Titi60\\SyliusNotifyWhenAvailablePlugin\\": "src/",
             "Tests\\Acme\\SyliusExamplePlugin\\": "tests/"
         }
     },
