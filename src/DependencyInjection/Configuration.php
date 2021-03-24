@@ -14,8 +14,7 @@ final class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('gravita_notify_when_available_plugin');
+        $treeBuilder = new TreeBuilder('gravita_notify_when_available_plugin');
 
         return $treeBuilder;
     }
