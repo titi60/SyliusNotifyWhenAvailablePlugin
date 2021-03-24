@@ -29,14 +29,14 @@
     public function registerBundles(): array
     {
         return array_merge(parent::registerBundles(), [
-            
+
             // ...
 
-            new \Gravita\SyliusNotifyWhenAvailablePlugin\GravitaSyliusNotifyWhenAvailablePlugin(),
+            new Titi60\SyliusNotifyWhenAvailablePlugin\GravitaSyliusNotifyWhenAvailablePlugin(),
         ]);
     }
     ```
-    
+
 3. Add the required resource files to your config.yml:
 
     ````yaml
@@ -45,13 +45,13 @@
        - { resource: "@GravitaSyliusNotifyWhenAvailablePlugin/Resources/config/config.yml" }
        - { resource: "@GravitaSyliusNotifyWhenAvailablePlugin/Resources/config/resources.yml" }
     ````
-    
+
 4. Add the bundle routing file to your routing.yml
     ````yaml
     gravita_notify_when_available_shop:
         resource: "@GravitaSyliusNotifyWhenAvailablePlugin/Resources/config/app/shop_routing.yml"
     ````
-    
+
 5. Update your database:
     ````bash
     php bin\console doctrine:schema:update --force
@@ -65,5 +65,5 @@
   - Available from: this fields holds the message showed to the user if this product variant is
     not checked as "Available"
   - Available for purchase: if this fields is **not checked** the message that is set on "Available from"
-    will bee shown to the user. With this message will be a form to register an email on the 
+    will bee shown to the user. With this message will be a form to register an email on the
     notification list of the product variant.

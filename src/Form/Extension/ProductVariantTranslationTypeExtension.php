@@ -28,9 +28,9 @@ class ProductVariantTranslationTypeExtension extends AbstractTypeExtension
     /**
      * {@inheritdoc}
      */
-    public function getExtendedType()
+    public function getExtendedTypes() : iterable
     {
-        return ProductVariantTranslationType::class;
+        return [ProductVariantTranslationType::class];
     }
 
 }
