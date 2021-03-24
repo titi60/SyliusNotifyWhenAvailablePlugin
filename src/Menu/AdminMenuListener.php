@@ -6,7 +6,7 @@
  * Time: 11:20
  */
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\Menu;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\Menu;
 
 
 use Knp\Menu\ItemInterface;

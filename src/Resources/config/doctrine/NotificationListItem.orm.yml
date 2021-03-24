@@ -1,7 +1,7 @@
-Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem:
+Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem:
     type: entity
     table: gravita_notification_list_item
-    repositoryClass: Gravita\SyliusNotifyWhenAvailablePlugin\Repository\NotificationListItemRepository
+    repositoryClass: Titi60\SyliusNotifyWhenAvailablePlugin\Repository\NotificationListItemRepository
     id:
         id:
             type: integer
@@ -10,7 +10,7 @@ Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem:
                 strategy: AUTO
     manyToOne:
         notificationList:
-            targetEntity: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
+            targetEntity: Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
             inversedBy: items
             cascade:
                 - persist

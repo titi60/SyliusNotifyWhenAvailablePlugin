@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\Model;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\Model;
 
 
 interface ProductVariantTranslationInterface

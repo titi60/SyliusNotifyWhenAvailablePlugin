@@ -1,17 +1,17 @@
 services:
     # Form overrides
     gravita.form.extension.type.product_variant:
-        class: Gravita\SyliusNotifyWhenAvailablePlugin\Form\Extension\ProductVariantTypeExtension
+        class: Titi60\SyliusNotifyWhenAvailablePlugin\Form\Extension\ProductVariantTypeExtension
         tags:
             - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantType }
     gravita.form.extension.type.product_variant_translation:
-            class: Gravita\SyliusNotifyWhenAvailablePlugin\Form\Extension\ProductVariantTranslationTypeExtension
+            class: Titi60\SyliusNotifyWhenAvailablePlugin\Form\Extension\ProductVariantTranslationTypeExtension
             tags:
                 - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductVariantTranslationType }
 
     # Admin menu customization
     gravita.listener.admin.menu_builder:
-        class: Gravita\SyliusNotifyWhenAvailablePlugin\Menu\AdminMenuListener
+        class: Titi60\SyliusNotifyWhenAvailablePlugin\Menu\AdminMenuListener
         tags:
             - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addMenuItems }
 

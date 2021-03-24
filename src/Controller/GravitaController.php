@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\Controller;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\Controller;
 
-use Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList;
-use Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem;
+use Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList;
+use Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;

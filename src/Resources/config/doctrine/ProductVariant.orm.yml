@@ -1,9 +1,9 @@
-Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant:
+Titi60\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant:
     type: entity
     table: sylius_product_variant
     oneToOne:
         notificationList:
-            targetEntity: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
+            targetEntity: Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
             mappedBy: productVariant
     fields:
         isAvailable:

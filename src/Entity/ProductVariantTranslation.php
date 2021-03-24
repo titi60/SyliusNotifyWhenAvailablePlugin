@@ -1,9 +1,9 @@
 <?php
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\Entity;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\Entity;
 
 use Sylius\Component\Product\Model\ProductVariantTranslation as BaseProductVariantTranslation;
-use Gravita\SyliusNotifyWhenAvailablePlugin\Model\ProductVariantTranslationInterface;
+use Titi60\SyliusNotifyWhenAvailablePlugin\Model\ProductVariantTranslationInterface;
 
 /**
  * ProductVariantTranslation

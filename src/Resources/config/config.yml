@@ -5,7 +5,7 @@ sylius_product:
     resources:
         product_variant:
             classes:
-                model: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant
+                model: Titi60\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant
             translation:
                 classes:
-                    model: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariantTranslation
+                    model: Titi60\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariantTranslation

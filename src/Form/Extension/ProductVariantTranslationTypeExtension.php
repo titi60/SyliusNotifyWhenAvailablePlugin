@@ -6,7 +6,7 @@
  * Time: 10:38
  */
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\Form\Extension;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\Form\Extension;
 
 
 use Sylius\Bundle\ProductBundle\Form\Type\ProductVariantTranslationType;

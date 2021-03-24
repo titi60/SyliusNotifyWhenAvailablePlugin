@@ -1,7 +1,7 @@
-Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList:
+Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList:
     type: entity
     table: gravita_notification_list
-    repositoryClass: Gravita\SyliusNotifyWhenAvailablePlugin\Repository\NotificationListRepository
+    repositoryClass: Titi60\SyliusNotifyWhenAvailablePlugin\Repository\NotificationListRepository
     id:
         id:
             type: integer
@@ -10,14 +10,14 @@ Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList:
                 strategy: AUTO
     oneToOne:
         productVariant:
-            targetEntity: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant
+            targetEntity: Titi60\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariant
             inversedBy: notificationList
             joinColumn:
                 name: product_variant_id
                 referencedColumnName: id
     oneToMany:
         items:
-            targetEntity: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem
+            targetEntity: Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem
             mappedBy: notificationList
             cascade:
                 - persist

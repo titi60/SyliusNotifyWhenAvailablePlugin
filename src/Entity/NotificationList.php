@@ -1,6 +1,6 @@
 <?php
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\Entity;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Sylius\Component\Resource\Model\ResourceInterface;

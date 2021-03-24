@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\DependencyInjection;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

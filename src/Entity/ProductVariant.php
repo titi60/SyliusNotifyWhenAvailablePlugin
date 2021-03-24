@@ -6,7 +6,7 @@
  * Time: 9:51
  */
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\Entity;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\Entity;
 
 use Sylius\Component\Core\Model\ProductVariant as BaseProductVariant;
 use Sylius\Component\Product\Model\ProductVariantTranslationInterface;

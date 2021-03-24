@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin;
 
-use Gravita\SyliusNotifyWhenAvailablePlugin\DependencyInjection\GravitaSyliusNotifyWhenAvailableExtension;
+use Titi60\SyliusNotifyWhenAvailablePlugin\DependencyInjection\GravitaSyliusNotifyWhenAvailableExtension;
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

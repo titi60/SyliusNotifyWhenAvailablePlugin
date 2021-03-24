@@ -1,6 +1,6 @@
 <?php
 
-namespace Gravita\SyliusNotifyWhenAvailablePlugin\Repository;
+namespace Titi60\SyliusNotifyWhenAvailablePlugin\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

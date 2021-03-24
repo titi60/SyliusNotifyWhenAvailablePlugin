@@ -3,8 +3,8 @@ sylius_resource:
         gravita.notification_list:
             driver: doctrine/orm
             classes:
-                model: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
+                model: Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationList
         gravita.notification_list_item:
             driver: doctrine/orm
             classes:
-                model: Gravita\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem
+                model: Titi60\SyliusNotifyWhenAvailablePlugin\Entity\NotificationListItem

@@ -1,7 +1,7 @@
-Gravita\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariantTranslation:
+Titi60\SyliusNotifyWhenAvailablePlugin\Entity\ProductVariantTranslation:
     type: entity
     table: null
-    #repositoryClass: Gravita\SyliusNotifyWhenAvailablePlugin\Repository\ProductVariantTranslationRepository
+    #repositoryClass: Titi60\SyliusNotifyWhenAvailablePlugin\Repository\ProductVariantTranslationRepository
     fields:
         availableFrom:
             type: string
