@@ -3,6 +3,7 @@
 namespace Titi60\SyliusNotifyWhenAvailablePlugin\Repository;
 use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
 
+
 /**
  * NotificationListRepository
  *
