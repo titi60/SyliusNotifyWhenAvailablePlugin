@@ -2,7 +2,7 @@
 
 namespace Titi60\SyliusNotifyWhenAvailablePlugin\Repository;
 
-use Doctrine\ORM\EntityRepository;
+use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
 
 /**
  * ProductVariantTranslationRepository
