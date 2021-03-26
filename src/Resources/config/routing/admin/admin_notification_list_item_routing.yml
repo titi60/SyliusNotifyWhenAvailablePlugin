@@ -2,7 +2,7 @@ gravita_admin_notification_list_item:
     resource: |
         alias: gravita.notification_list_item
         section: admin
-        templates: SyliusAdminBundle:Crud
+        templates: "@SyliusAdminBundle/Crud"
         except: ['create', 'update']
         redirect: show
         grid: gravita_admin_notification_list_item
