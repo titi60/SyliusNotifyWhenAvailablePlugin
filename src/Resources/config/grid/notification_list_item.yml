@@ -20,7 +20,7 @@ sylius_grid:
                     type: twig
                     label: gravita.notification_list_item.notified
                     options:
-                        template: GravitaSyliusNotifyWhenAvailablePlugin:Grid/Field:notified.html.twig
+                        template: "@Titi60SyliusNotifyWhenAvailablePlugin/Grid/Field/notified.html.twig"
             filters:
                 email:
                     type: string
