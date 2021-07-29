@@ -4,9 +4,8 @@
     "description": "A Sylius plugin that enables the option of setting a future date when the product will be available. Users can add an email to notify then when the product can be purchased",
     "license": "MIT",
     "require": {
-        "php": "^7.1",
-
-        "sylius/sylius": "^1.9"
+        "php": "^7.4 || ^8.0",
+        "sylius/sylius": "~1.10.0"
     },
     "require-dev": {
         "behat/behat": "^3.3",
